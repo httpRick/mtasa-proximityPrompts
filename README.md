@@ -47,7 +47,7 @@ Property List:
 - objectText
 - keyboardKeyCode
 - holdDuration
-- exclusivity
+- exclusivity [default: "onePerButton"]
 - mode [default: "time"]
 - enabled [default: true]: Determines whether prompt interaction is enabled or disabled
 - isPostGUI [default: false]: A bool representing whether the text should be drawn on top of or behind any ingame GUI (rendered by CEGUI).
@@ -56,6 +56,17 @@ Property List:
 Available properties for mode:
 - time: When using an interaction with a prompt, if it does not reach the end, it will go backwards and start from the point left in time
 - state: Every time we release a key during an interaction, we start from scratch
+
+Available properties for exclusivity:
+- onePerButton: Only one, i.e. if you have many proximity prompts next to each other, it will show them all BUT if more than one has the same keycode, it will only show the 1 that is closest and the rest that have a different keycode.
+Example: 2 proximity prompts with keycode E and next to each other 2 proximity prompts with keycode F and 1 proximity prompt with keycode D. In this case you see the proximity prompt E closest to the camera and the proximity prompt F and proximity prompt D closest to the camera.
+In short: show all, but if more than one has the same keycode, select only the one closest to the camera from all those that have the same keycode.
+
+- alwaysShow: In this state, it doesn't matter what proximity prompt is on the screen if it is in a given range, it doesn't matter if there are the same proximity prompts with the same keycodes next to each other, if they have alwaysShow, they show up in pairs at once and can be triggered at once.
+The onePerButton state ignores alwaysShow and only works on states with onePerButton. That is: If we have 3 Proximity Prompts with the same key codes, 2 of them will be onePerButton and 1 Always on show, then we will see 2 proximity prompts, the game will always show the one with always on show and will select the onePerButton closest to the camera.
+
+- oneGlobally Works similarly to onePerButton, except that you only see one proximity prompt from this group out of all. Example: You have 2 Proximity prompts next to each other from oneGlobally, one has keycode F and the other keycode E. In this case, only the one that is closest to the camera will be shown, regardless of the fact that there is another one next to it with a different code.
+
 
 Return:
 - If the function succeeds, it returns true, false otherwise.
