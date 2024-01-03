@@ -14,20 +14,20 @@ ProximityPrompt enables interactions in the 3D world, such as opening a door/gat
 
     createProximityPrompt(float x, float y, float z, float rotation, float maxDistance, string actionText, string objectText, [string keyboardKeyCode, float holdDuration, string exclusivity, string mode])
 
-- Required Arguments
-x: A floating point number representing the X coordinate on the map.
-y: A floating point number representing the Y coordinate on the map.
-z: A floating point number representing the Z coordinate on the map.
-rotation: A floating point number representing the Z rotation on the map.
-range: the range in which the proximity Prompt will be usable and visible.
-actionText: action name shown to the player.
-objectText: name for the object being interacted with.
+Required Arguments
+- x: A floating point number representing the X coordinate on the map.
+- y: A floating point number representing the Y coordinate on the map.
+- z: A floating point number representing the Z coordinate on the map.
+- rotation: A floating point number representing the Z rotation on the map.
+- range: the range in which the proximity Prompt will be usable and visible.
+- actionText: action name shown to the player.
+- objectText: name for the object being interacted with.
 
-- Optional Arguments
-keyboardKeyCode: The keyboard key which will trigger the prompt, default set "E".
-holdDuration: time for three to hold the key to trigger the prompt, default set 0 ms.
-exclusivity: This property is used to customize which prompts can be shown at the same time, default set "onePerButton".
-mode: This property is used to determine how the prompt behaves when it comes to interacting with it, default set "time".
+Optional Arguments
+- keyboardKeyCode: The keyboard key which will trigger the prompt, default set "E".
+- holdDuration: time for three to hold the key to trigger the prompt, default set 0 ms.
+- exclusivity: This property is used to customize which prompts can be shown at the same time, default set "onePerButton".
+- mode: This property is used to determine how the prompt behaves when it comes to interacting with it, default set "time".
 
 Return:
 - If the function succeeds, it returns element proximity prompt, false otherwise.
