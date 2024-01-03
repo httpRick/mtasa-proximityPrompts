@@ -80,7 +80,7 @@ Example Server Side:
 
 # Event Client Side:
 
-      addEventHandler("onPromptTriggered", element Proximity Prompt, function functionName)
+      addEventHandler("onClientPromptTriggered", element Proximity Prompt, function functionName)
 
 This event is triggered every time a player activates a Prixmity Prompt.
 
