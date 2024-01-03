@@ -1,15 +1,3 @@
-# Proximity Prompts
-ProximityPrompt enables interactions in the 3D world, such as opening a door/gate or picking up an object.
-
-# Authors
-- [Rick](https://github.com/httpRick)
-- [T34P07](https://github.com/T34P07)
-
-# Installation
-1. Download resource.
-2. Place the resource in your server resources folder.
-
-# Documentation
 
 # Proximity Prompts
 ProximityPrompt enables interactions in the 3D world, such as opening a door/gate or picking up an object.
