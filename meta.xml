@@ -1,0 +1,17 @@
+<meta>
+	<info author="Rick and T34P07" name="proximityPrompts" type="script" version="1.0.0"/>
+	<min_mta_version server="1.5.2-9.07903" client="1.5.2-9.07903" />
+
+  	<aclrequest>
+        <right name="function.fetchRemote" access="true"/>
+    </aclrequest>
+
+	<script src="update.lua" type="server" />
+	<script src="sourceG.lua" type="shared"/>
+	<script src="sourceC.lua" type="client"/>
+	<script src="sourceS.lua" type="server"/>
+
+	<export function="createProximityPrompt" type="shared"/>
+	<export function="proximityPromptSetProperty" type="shared"/>
+	<export function="isProximityPrompt" type="shared"/>
+</meta>
