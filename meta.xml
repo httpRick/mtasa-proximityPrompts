@@ -9,7 +9,6 @@
 	<script src="update.lua" type="server" />
 	<script src="sourceG.lua" type="shared"/>
 	<script src="sourceC.lua" type="client"/>
-	<script src="sourceS.lua" type="server"/>
 
 	<export function="createProximityPrompt" type="shared"/>
 	<export function="proximityPromptSetProperty" type="shared"/>
