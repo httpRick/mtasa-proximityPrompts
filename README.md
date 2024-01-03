@@ -1,0 +1,2 @@
+# mtasa-proximityPrompts
+#
