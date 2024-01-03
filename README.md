@@ -1,6 +1,8 @@
-
+![image](https://github.com/httpRick/mtasa-proximityPrompts/assets/8506863/250fde2d-254e-4930-9358-9c71f02302c8)
 # Proximity Prompts
 ProximityPrompt enables interactions in the 3D world, such as opening a door/gate or picking up an object.
+
+[screenshot.png](https://i.imgur.com/T0lk3tY.png)
 
 # Authors
 - [Rick](https://github.com/httpRick)
