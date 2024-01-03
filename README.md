@@ -68,13 +68,13 @@ Example Server Side:
         
         local isColumbianGateOpen = false
         local columbianGate = createObject(975, 2719.92578125, -2405.2861328125, 14.136102676392, 0, 0, 90)
-        local prompt = createProximityPrompt(2719.92578125, -2405.2861328125, 14.136102676392, 0, 5, "Open Gate", "Gate", "G", 1200)
+        local prompt = exports["mtasa-proximityPrompts"]:createProximityPrompt(2719.92578125, -2405.2861328125, 14.136102676392, 0, 5, "Open Gate", "Gate", "G", 1200)
         attachElements(prompt, columbianGate, -3.5, 0.15, 0, 0, 0, 0)
 
         function moveColumbianGate()
             isColumbianGateOpen = not isColumbianGateOpen
             moveObject(columbianGate, 1000, 2719.92578125, -2405.2861328125+(isColumbianGateOpen and 4.73685 or 0), 14.136102676392)
-            proximityPromptSetProperty(source, "actionText", isColumbianGateOpen and "Close Gate" or "Open Gate")
+            exports["mtasa-proximityPrompts"]:proximityPromptSetProperty(source, "actionText", isColumbianGateOpen and "Close Gate" or "Open Gate")
         end
         addEventHandler("onPromptTriggered", prompt, moveColumbianGate)
 
@@ -88,12 +88,12 @@ Example Client Side:
         
         local isColumbianGateOpen = false
         local columbianGate = createObject(975, 2719.92578125, -2405.2861328125, 14.136102676392, 0, 0, 90)
-        local prompt = createProximityPrompt(2719.92578125, -2405.2861328125, 14.136102676392, 0, 5, "Open Gate", "Gate", "G", 1200)
+        local prompt = exports["mtasa-proximityPrompts"]:createProximityPrompt(2719.92578125, -2405.2861328125, 14.136102676392, 0, 5, "Open Gate", "Gate", "G", 1200)
         attachElements(prompt, columbianGate, -3.5, 0.15, 0, 0, 0, 0)
 
         function moveColumbianGate()
             isColumbianGateOpen = not isColumbianGateOpen
             moveObject(columbianGate, 1000, 2719.92578125, -2405.2861328125+(isColumbianGateOpen and 4.73685 or 0), 14.136102676392)
-            proximityPromptSetProperty(source, "actionText", isColumbianGateOpen and "Close Gate" or "Open Gate")
+            exports["mtasa-proximityPrompts"]:proximityPromptSetProperty(source, "actionText", isColumbianGateOpen and "Close Gate" or "Open Gate")
         end
         addEventHandler("onClientPromptTriggered", prompt, moveColumbianGate)
